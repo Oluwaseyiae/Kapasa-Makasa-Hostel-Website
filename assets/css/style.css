@@ -1,0 +1,531 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #32CD32;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+* {
+  font-family: 'Cabin', sans-serif;
+  /* font-family: 'Readex Pro', sans-serif; */
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: var(--bs-purple);
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: var(--bs-purple);
+  transition: background 0.2s ease-in-out;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navbar {
+  background: var(--bs-purple);
+}
+
+nav .logo {
+  width: 40px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  background: var(--bs-purple);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: 0;
+}
+
+.navbar-toggler-icon span {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 12px;
+  transition: color 1s;
+}
+
+.navbar-toggler-icon span:hover {
+  color: #fff !important;
+}
+
+nav .nav-link:hover {
+  color: darkgreen !important;
+  font-weight: bold;
+}
+
+.btnnav {
+  border: none;
+  outline: 0;
+  background: var(--bs-light);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--bs-purple);
+  transition: background 1s;
+}
+
+.btnnav:hover {
+  color: var(--bs-light);
+  background: var(--bs-purple);
+  /* border: 1px solid var(--bs-light); */
+
+}
+
+@media screen and (max-width: 768px) {
+  nav .login a:hover{
+    color: var(--bs-purple) !important;
+    border-radius: 3px;
+    background: var(--bs-light);
+    font-weight: bold;
+  }
+  nav .nanavbar-nav{
+    margin-top: 50px;
+  }
+  
+}
+
+
+
+/*--------------------------------------------------------------
+# Showcase
+--------------------------------------------------------------*/
+.showcase {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/showcase.jpg");
+  background-position: center;
+  background-size: cover;
+  animation: slide 30s ease-in-out forwards infinite;
+ 
+}
+
+@keyframes slide {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/showcase.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  50% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/showcase2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/showcase3.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+
+.btnhome {
+  border: none;
+  outline: 0;
+  background: var(--bs-purple);
+  font-weight: bold;
+  color: #FFF;
+}
+
+.btnhome:hover {
+  color: var(--bs-purple);
+  background: var(--bs-light)
+}
+
+.me-h1 {
+  margin-top: 150px;
+  font-size: 40px;
+
+}
+@media screen and (max-width: 800px) {
+
+  .showcase {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .showcase {
+    height: 70vh;
+  }
+
+  .me-h1 {
+    font-size: 27px;
+    margin-top: 50px;
+  }
+
+  .py-2 {
+    font-size: 12px;
+  }
+
+  .btnhome {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .showcase {
+    height: 80vh;
+  }
+  .me-h1 {
+    font-size: 22px;
+    margin-top: 50px;
+  }
+  .py-2 {
+    font-size: 12px;
+  }
+
+  .btnhome {
+    font-size: 12px;
+  }
+
+}
+
+
+
+  /*--------------------------------------------------------------
+# Our Services and Features 
+--------------------------------------------------------------*/
+  #Features {
+    background: #087830;
+  }
+
+  .p-top {
+    margin-bottom: 50px;
+  }
+
+  .box .icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box .icon i {
+    font-size: 60px;
+    color: #fff;
+  }
+
+  .box h5 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .box p {
+    margin-left: 80px;
+  }
+
+  /*--------------------------------------------------------------
+# Records
+--------------------------------------------------------------*/
+  #Record {
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../img/footer.jpg");
+    background-position: fixed;
+    background-size: cover;
+  }
+
+  .record-icon i {
+    font-size: 70px;
+    color: #fff;
+  }
+
+  #Record span {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  #Record p {
+    font-size: 15px;
+  }
+
+  /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+  .contact {
+    padding-bottom: 130px;
+  }
+
+  .contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .contact .info i {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: var(--bs-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--bs-purple);
+  }
+
+  .contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #173b6c;
+  }
+
+  .contact .info .email p {
+    padding-top: 5px;
+  }
+
+  .contact .info .social-links {
+    padding-left: 60px;
+  }
+
+  .contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #F5B041;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .contact .php-email-form {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .contact .php-email-form .form-group {
+    padding-bottom: 8px;
+  }
+
+  .contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+  }
+
+  .contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+  }
+
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+
+  .contact .php-email-form input {
+    height: 44px;
+  }
+
+  .contact .php-email-form textarea {
+    padding: 10px 12px;
+  }
+
+  .contact .php-email-form button[type="submit"] {
+    background: var(--bs-purple);
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+
+  .contact .php-email-form button[type="submit"]:hover {
+    background: var(--bs-purple);
+    opacity: 0.8;
+  }
+
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  /*-------------------------------------------------------------- 
+  #Footer 
+  --------------------------------------------------------------*/
+
+  #Footer {
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/footer.jpg);
+        background-repeat: no-repeat !important;
+        background-size: cover  !important;
+        background-position: center  !important;    
+        line-height: 1.2rem;
+        }
+
+  .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #fff;
+    color: var(--bs-purple);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+
+  .social-links a:hover {
+    background: var(--bs-purple);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #Footer .navbar-nav li a {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .foot-nav li a:hoover {
+    color: var(--bs-purple);
+  }
+#Footer nav .nav-link:hover{
+  color: var(--bs-purple);
+}
+  hr {
+    width: 95%;
+    border: 0;
+    border-bottom: 1px solid var(--light);
+    margin: 1.2rem auto;
+  }
